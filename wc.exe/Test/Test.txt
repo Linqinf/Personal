@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<math.h>
+#define TRUE  1
+#define FALSE 0
+
+//
+{//
+}//
+typedef int bool;
+typedef struct BiTNode
+{
+    char data; //可存放变量或者运算符
+    int value;//存储以该节点为根的树的值
+    struct BiTNode *lchild;//左孩子指针
+    struct BiTNode *rchild;//右孩子指针
+}BiTNode,*BiTree;
