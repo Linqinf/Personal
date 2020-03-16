@@ -28,7 +28,6 @@ public class Recursion {
         if(file.getAbsolutePath().split("\\.").length == 2){
             if(file.isDirectory() == false && (file.getAbsolutePath().split("\\.")[1].equals(format)) || format.equals("*")){
                     //判断文件类型和文件格式
-                System.out.println("w lai la ");
                     FilesNumber++;
                     msg += "第" +  FilesNumber + "个文件名为" ;
                     System.out.println("第" +  FilesNumber + "个文件为" + file.getAbsolutePath());
@@ -73,7 +72,6 @@ public class Recursion {
                     if(value.equals("")||value.matches("\\{|\\}")) blank++; //累加空白行数
                     else if (value.matches("(//|\\{//|\\}//).*")) comment++;    //累加注释行数
                     else codeline++; //代码行数
-                    //msg += value + "\n";
                     String r = value.replaceAll("\\.","");
                     r = r.replaceAll("[^\\w]", " ");//特殊符号都去除，变为空格,方便统计单词数
                     r = r.replaceAll("\\s+"," ").replaceAll("\""," ");
